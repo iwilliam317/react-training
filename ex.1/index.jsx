@@ -3,4 +3,4 @@ import ReactDOM from 'react-dom'
 
 import Hello from './Hello'
 
-ReactDOM.render(<Hello value='William' />, document.getElementById('app'));
+ReactDOM.render(<Hello />, document.getElementById('app'));
