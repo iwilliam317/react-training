@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Hello from './Hello'
+import Default, {First, Second} from './Components'
 
-ReactDOM.render(<Hello value='William' />, document.getElementById('app'));
+ReactDOM.render(
+    <div>
+        <First />
+        <Second />
+        <Default />
+    </div>
+    , document.getElementById('app'));
