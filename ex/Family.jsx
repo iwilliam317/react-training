@@ -1,10 +1,10 @@
 import React from 'react'
-import Member from './Member'
 
 export default props => (
     <div>
-        <Member name="Joey" lastName="Scalleta"/>
-        <Member name="Vitto" lastName="Barbaro"/>
+        <h1>Family {props.lastName}</h1>
+        {props.children}
+        {React.cloneElement(props.children, {...props})}
     </div>
 
 )
