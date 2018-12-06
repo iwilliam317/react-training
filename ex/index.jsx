@@ -1,12 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Default, {First, Second} from './Components'
+import Family from './Family'
 
 ReactDOM.render(
-    <div>
-        <First />
-        <Second />
-        <Default />
-    </div>
+    <Family />
     , document.getElementById('app'));
