@@ -1,13 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Family from './Family'
-import Member from './Member'
+import Counter from './counter'
 
 ReactDOM.render(
-    <Family lastName='Scaletta'>
-        <Member name='Vito'/>
-        <Member name='Joe'/>
-        <Member name='Giulia'/>        
-    </Family>
+    <Counter initialValue={10} />
     , document.getElementById('app'));
