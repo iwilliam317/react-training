@@ -14,7 +14,9 @@ class AutoCounter extends Component{
         setInterval(() => this.sum(), 1000)
     }
     sum(){
-         this.setState({ value : this.state.value + 1})
+        let { value } = this.state;
+        value++;
+        this.setState({ value })
     }
     render(){
         return (
