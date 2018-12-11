@@ -20,7 +20,6 @@ class AutoCounter extends Component{
         return (
             <div>
                 <h1>{this.state.value}</h1>
-                <button onClick={()=> this.sum()}>Add</button>
             </div>
         )
     }
