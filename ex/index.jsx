@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Counter2 from './counter2'
+import AutoCounter from './autoCounter'
 
 ReactDOM.render(
-    <Counter2 value={10} />
+    <AutoCounter value={10} />
     , document.getElementById('app'));
