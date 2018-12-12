@@ -3,11 +3,7 @@ import React, { Component } from 'react'
 class Form extends Component {
     constructor(props){
         super(props)
-        this.state = { name: '' }
-        
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        
+        this.state = { name: '' }       
     }
 
     handleSubmit(event){
@@ -20,12 +16,12 @@ class Form extends Component {
     render(){
         return (
             <div>
-                <form onSubmit={ this.handleSubmit }>
+                <form onSubmit={ this.handleSubmit.bind(this) }>
                     <label>Name: </label>
-                    <input onChange={ this.handleChange }/>
+                    <input onChange={ this.handleChange.bind(this) }/>
                     <button type='submit'>Send</button>
                 </form>
-                                
+                { this.state.name}       
             </div>
         )
 
