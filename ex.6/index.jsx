@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Field from './field'
+import AutoCounter from './autoCounter'
 
 ReactDOM.render(
-    <Field initialValue='My render text' />
+    <AutoCounter value={0} />
     , document.getElementById('app'));
