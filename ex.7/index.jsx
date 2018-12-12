@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Form from './form'
+import Field from './field'
 
 ReactDOM.render(
-    <Form />
+    <Field initialValue='My render text' />
     , document.getElementById('app'));
