@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Form from './form'
+import Event from './Event'
 
 ReactDOM.render(
-    <Form />
-    , document.getElementById('app'));
+    <Event initialValue={5} />, document.getElementById('app'))
