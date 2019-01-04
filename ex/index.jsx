@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Customer from './customer'
+import { combineReducers, createStore } from 'redux'
+import { Provider } from 'react-redux'
+ 
+import Field  from './field'
 
 
 ReactDOM.render(
-    <Customer  />, document.getElementById('app'))
+    <Field  />, document.getElementById('app'))
