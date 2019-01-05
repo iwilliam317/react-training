@@ -10,8 +10,9 @@ const reducers = combineReducers({
     field: () => ({ value: 'Value from reducer'})
 })
 
+const store = createStore(reducers)
 ReactDOM.render(
-    <Provider store={createStore(reducers)}>
+    <Provider store={store}>
         <Field  />    
     </Provider>
     , document.getElementById('app'))
