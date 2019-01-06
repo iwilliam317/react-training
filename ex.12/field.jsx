@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class Field extends Component {    
- 
+
     render(){
         return(
             <div>
@@ -13,9 +13,9 @@ class Field extends Component {
     }
 }
 
-
 const mapStateToProps = state => {
-    return { value: state.field.value}
+    return { 
+        value: state.field.value 
+    }
 }
-
 export default connect(mapStateToProps)(Field)
