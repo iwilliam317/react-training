@@ -1,4 +1,4 @@
-const INITIAL_STATE = { value: 'hey' }
+const INITIAL_STATE = { value:  'Default from redux' }
 
 export default (state = INITIAL_STATE, action) => {
     switch(action.type){
