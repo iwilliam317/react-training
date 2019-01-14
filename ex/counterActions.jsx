@@ -2,4 +2,8 @@ const increase = () => ({
         type: 'INCREASE'
 })
 
-export { increase }
+const decrease = () => ({
+        type: 'DECREASE'
+})
+
+export { increase, decrease }
