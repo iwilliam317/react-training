@@ -6,7 +6,7 @@ export default function (state = INITIAL_STATE, action){
         case 'DECREASE':
             return {...state, value: state.value - state.step }
         case 'ADD_STEP':
-            return {...state, step: +action.payload }
+            return {...state, step: Number(action.payload) }
         default:
             return state
     }
