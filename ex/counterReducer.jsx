@@ -1,10 +1,12 @@
-const INITIAL_STATE = { value: 1 }
+const INITIAL_STATE = { value: 1, step: 1 }
 export default function (state = INITIAL_STATE, action){
     switch(action.type){
         case 'INCREASE':
-            return { value: state.value + 1 }
+            return {...state, value: state.value + state.step }
         case 'DECREASE':
-            return { value: state.value - 1 }
+            return {...state, value: state.value - state.step }
+        case 'ADD_STEP':
+            return {...state, step: +action.payload }
         default:
             return state
     }

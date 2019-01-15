@@ -6,4 +6,9 @@ const decrease = () => ({
         type: 'DECREASE'
 })
 
-export { increase, decrease }
+const addStep = (event) => ({
+        type: 'ADD_STEP',
+        payload: event.target.value
+})
+
+export { increase, decrease, addStep }
