@@ -5,8 +5,9 @@ export default (state = INITIAL_STATE, action) => {
         case 'CHANGE_NUMBER':
             return {...state, number: action.payload }
         case 'ADD':
-            console.log(action.payload)
             return {...state, counter: state.counter + Number(action.payload) }
+        case 'RESET':
+            return {...state, counter: 0}
         default:
             return state
     }

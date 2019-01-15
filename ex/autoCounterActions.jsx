@@ -3,9 +3,13 @@ const add = number => ({
     payload: number
 })
 
+const reset = () => ({
+    type: 'RESET'
+})
+
 const handleChange = event => ({
     type: 'CHANGE_NUMBER',
     payload: event.target.value
 })
 
-export { add, stop, reset, handleChange }
+export { add, reset, handleChange }
