@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 class Todo extends Component {
     constructor(props){
         super(props)
+        
     }
 
     componentWillMount(){
@@ -15,6 +16,12 @@ class Todo extends Component {
         return (
             <div>
                 <h1>List of to-dos</h1>
+                <ul>
+                    { this.props.todo.list.map(todo => {
+                        return <li key={todo._id}>{ todo.description }</li>
+                    })}
+
+                </ul>
             </div>
         )
     }
