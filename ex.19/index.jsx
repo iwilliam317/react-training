@@ -1,21 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Todo from './todo'
-
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 
-import todoReducer from './todoReducer'
+import Counter from './counter'
 
-const reducers = combineReducers({
-    todo: todoReducer
+import counterReducer from './counterReducer'
+
+const reducers = combineReducers({ 
+    counter: counterReducer
 })
 
 const store = createStore(reducers)
 
-
 ReactDOM.render(
     <Provider store={store}>
-        <Todo />
+        <Counter />
     </Provider>, document.getElementById('app'))
