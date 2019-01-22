@@ -1,3 +1,3 @@
 # react-training
 
-Repository created for practing isolated react examples :)
+Repository created for practing isolated react-redux examples :)
