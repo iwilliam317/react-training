@@ -20,3 +20,4 @@ const todoReducer = (state = INITIAL_STATE, action) => {
     }
 }
 
+export default todoReducer
