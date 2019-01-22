@@ -1,10 +1,10 @@
 const INITIAL_STATE = { 
     list: [
         { 
-            todo: 'study'
+            description: 'study'
         }, 
         {
-            todo: 'wash dishes'
+            description: 'wash dishes'
         }
     ]
 }

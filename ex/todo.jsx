@@ -7,10 +7,16 @@ class Todo extends Component {
         super(props)
     }
     render(){
+        // const { list } = this.props.todo
         return (
             <div>
                 <h1>Todo</h1>
                 <input type='text' /> <button>Add</button>
+                {/* <ul>
+                    { list.map(todo => {
+                        return <li>{todo.description}</li>
+                    })}
+                </ul> */}
             </div>
         )
     }
