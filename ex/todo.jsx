@@ -1,27 +1,24 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { addTodo, listTodo, handleChange } from './todoAction'
 
 class Todo extends Component {
     constructor(props){
         super(props)
     }
+
     render(){
-        // const { list } = this.props.todo
+        const { handleChange, description, addTodo } = this.props
         return (
             <div>
                 <h1>Todo</h1>
-                <input type='text' /> <button>Add</button>
-                {/* <ul>
-                    { list.map(todo => {
-                        return <li>{todo.description}</li>
-                    })}
-                </ul> */}
+                <input type='text' onChange={handleChange}/> <button onClick={() => addTodo(description)}>Add</button>
             </div>
         )
     }
 }
-const mapStateToProps = state => ({ todo: state.todo })
-const mapDispatchToProps = dispatch => bindActionCreators({  }, dispatch)
+const mapStateToProps = state => ({ description: state.todo.description })
+const mapDispatchToProps = dispatch => bindActionCreators({ addTodo, listTodo, handleChange }, dispatch)
 
-export default connect(mapDispatchToProps, mapStateToProps)(Todo)
+export default connect(mapStateToProps, mapDispatchToProps)(Todo)
