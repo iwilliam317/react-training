@@ -6,16 +6,17 @@ const INITIAL_STATE = {
 const todoReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
         case 'HANDLE_CHANGE':
-        console.log('asdsa')
             return {...state, description: action.payload }
+
         case 'LIST_TODO':
             return { ...state, list: state.list }
+
         case 'ADD_TODO':
             const newList = [...state.list]
-            var d = new Date();
-            // d.getTime();    
-            newList.push({ _id: d.getTime(), description: action.payload })
-            return { ...state, list: newList }
+            const timestamp = new Date().getTime();
+ 
+            newList.push({ _id: timestamp, description: action.payload })
+            return { ...state, list: newList, description: '' }
 
         default:
             return state

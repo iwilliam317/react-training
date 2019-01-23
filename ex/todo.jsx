@@ -13,12 +13,12 @@ class Todo extends Component {
         return (
             <div>
                 <h1>Todo</h1>
-                <input type='text' onChange={handleChange}/> <button onClick={() => addTodo(description)}>Add</button>
-                <ul>
+                <input type='text' onChange={handleChange} value={description}/> <button onClick={() => addTodo(description)}>Add</button>
+                <ol>
                 { this.props.list.map(todo => {
                     return <li key={todo._id}>{ todo.description }</li>
                 })}
-                </ul>
+                </ol>
             </div>
         )
     }
