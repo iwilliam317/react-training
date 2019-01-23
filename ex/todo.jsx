@@ -14,11 +14,16 @@ class Todo extends Component {
             <div>
                 <h1>Todo</h1>
                 <input type='text' onChange={handleChange}/> <button onClick={() => addTodo(description)}>Add</button>
+                <ul>
+                { this.props.list.map(todo => {
+                    return <li key={todo._id}>{ todo.description }</li>
+                })}
+                </ul>
             </div>
         )
     }
 }
-const mapStateToProps = state => ({ description: state.todo.description })
+const mapStateToProps = state => ({ description: state.todo.description, list: state.todo.list })
 const mapDispatchToProps = dispatch => bindActionCreators({ addTodo, listTodo, handleChange }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo)

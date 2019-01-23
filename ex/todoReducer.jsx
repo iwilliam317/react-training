@@ -12,7 +12,9 @@ const todoReducer = (state = INITIAL_STATE, action) => {
             return { ...state, list: state.list }
         case 'ADD_TODO':
             const newList = [...state.list]
-            newList.push({ description: action.payload })
+            var d = new Date();
+            // d.getTime();    
+            newList.push({ _id: d.getTime(), description: action.payload })
             return { ...state, list: newList }
 
         default:
