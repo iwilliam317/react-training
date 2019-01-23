@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { addTodo, listTodo, handleChange } from './todoAction'
+import { addTodo, handleChange } from './todoAction'
+import TodoList from './todoList'
 
 class Todo extends Component {
     constructor(props){
@@ -14,16 +15,12 @@ class Todo extends Component {
             <div>
                 <h1>Todo</h1>
                 <input type='text' onChange={handleChange} value={description}/> <button onClick={() => addTodo(description)}>Add</button>
-                <ol>
-                { this.props.list.map(todo => {
-                    return <li key={todo._id}>{ todo.description }</li>
-                })}
-                </ol>
+                <TodoList />
             </div>
         )
     }
 }
-const mapStateToProps = state => ({ description: state.todo.description, list: state.todo.list })
-const mapDispatchToProps = dispatch => bindActionCreators({ addTodo, listTodo, handleChange }, dispatch)
+const mapStateToProps = state => ({ description: state.todo.description })
+const mapDispatchToProps = dispatch => bindActionCreators({ addTodo, handleChange }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo)
